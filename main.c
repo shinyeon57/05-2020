@@ -8,17 +8,14 @@ int main(int argc, char *argv[]) {\
 	int	input;
 	
 	printf("Enter the number :");
-	scanf("%d", &input);
+	scanf("%i", &input);
 	
 
-	if (input == 0)
-		printf("zero. \n");
+	if (input > 0)
+		printf("|number| = %i\n", input);
 		
-		else if (input > 0)
-			printf("positive. \n");
-			
-			else 
-				printf("non-positive. \n");
-	
+		else 
+			printf("|number| = %i\n", -input);
+
 	return 0;
 }
