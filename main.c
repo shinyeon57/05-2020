@@ -5,17 +5,20 @@
 
 int main(int argc, char *argv[]) {\
 	
-	int	input;
+	char c;
+	int cnt=0;
 	
-	printf("Enter the number :");
-	scanf("%i", &input);
-	
+	printf("input a string: ");
 
-	if (input > 0)
-		printf("|number| = %i\n", input);
+	while((c = getchar()) != '\n'){
 		
-		else 
-			printf("|number| = %i\n", -input);
+		if(c<='9' && c>='0'){
+		
+			cnt++;		
+		}	
+	}
 
+	printf("the number of digits is %i\n", cnt);
+	
 	return 0;
 }
