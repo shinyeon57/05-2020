@@ -3,22 +3,20 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {\
+int main(int argc, char *argv[]) {
 	
-	char c;
-	int cnt=0;
-	
-	printf("input a string: ");
+	int input;
+	int sum=0;
+	int i;
 
-	while((c = getchar()) != '\n'){
-		
-		if(c<='9' && c>='0'){
-		
-			cnt++;		
-		}	
-	}
+	printf("input a number: ");
+	scanf("%i", &input);
 
-	printf("the number of digits is %i\n", cnt);
+	for(i=1; i <= input; i++){
+		sum = sum + i;
+	}	
+
+	printf("the result is %i", sum);
 	
 	return 0;
 }
